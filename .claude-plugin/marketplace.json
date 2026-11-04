@@ -1,0 +1,22 @@
+{
+  "name": "atome",
+  "owner": {
+    "name": "Atome",
+    "email": "support@atome.sh",
+    "url": "https://atome.sh"
+  },
+  "description": "Atome for Claude: build and run your Atome app in your own words.",
+  "plugins": [
+    {
+      "name": "atome",
+      "source": "./plugins/atome",
+      "description": "Build your Atome app in your own words: fields, views, pages, forms, automations, data imports. Construisez votre app Atome avec vos mots.",
+      "category": "productivity",
+      "tags": [
+        "crm",
+        "no-code",
+        "automation"
+      ]
+    }
+  ]
+}

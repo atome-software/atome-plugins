@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "atome": {
+      "type": "http",
+      "url": "https://api.atome.sh/mcp"
+    }
+  }
+}
