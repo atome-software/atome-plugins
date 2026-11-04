@@ -78,6 +78,9 @@ they merge in Atome themselves; you tell them which groups and where.
 
 ## When it is really stuck
 
-The same refusal twice, or one the field rules do not explain: report it
-with `report_issue` (the shape of the row, never its values), tell them
+The same refusal twice, or one the field rules do not explain: tell them
 plainly what is blocked, and offer the consultant route for this import.
+
+When an Atome tool fails or needs a workaround, offer to report it to
+Atome's team with `report_issue`, through the atome-retour skill: drafted,
+shown, and sent only on their yes, never with their data.

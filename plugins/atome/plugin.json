@@ -1,0 +1,20 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "atome",
+  "version": "0.2.0",
+  "description": "Build your Atome app in your own words: fields, views, pages, forms, automations, data imports. Construisez votre app Atome avec vos mots.",
+  "author": {
+    "name": "Atome",
+    "email": "support@atome.sh",
+    "url": "https://atome.sh"
+  },
+  "homepage": "https://atome.sh",
+  "repository": "https://github.com/atome-software/atome-plugins",
+  "license": "Apache-2.0",
+  "keywords": [
+    "atome",
+    "crm",
+    "no-code",
+    "mcp"
+  ]
+}

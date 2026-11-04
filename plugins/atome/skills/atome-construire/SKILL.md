@@ -59,3 +59,9 @@ engineers, not settled; say so when you rely on it.
 5. **Read before writing, and read back after.**
 6. **What has no way back is done by the person in Atome**: deleting a
    collection or a field, merging records, regenerating a public link.
+
+## When a tool fails
+
+When an Atome tool fails or needs a workaround, offer to report it to
+Atome's team with `report_issue`, through the atome-retour skill: drafted,
+shown, and sent only on their yes, never with their data.

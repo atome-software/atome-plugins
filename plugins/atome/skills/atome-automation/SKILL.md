@@ -104,6 +104,9 @@ language.
 
 ## When it is really stuck
 
-The same issue twice, or an error the playbook does not cover: report it
-with `report_issue` (never record values or personal data), tell the person
-plainly what is blocked, and go on with what can be done.
+The same issue twice, or an error the playbook does not cover: tell the
+person plainly what is blocked, and go on with what can be done.
+
+When an Atome tool fails or needs a workaround, offer to report it to
+Atome's team with `report_issue`, through the atome-retour skill: drafted,
+shown, and sent only on their yes, never with their data.

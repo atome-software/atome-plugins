@@ -135,8 +135,10 @@ record values beyond what the change needs in the chat.
 ## When it is really stuck
 
 The same error from Atome twice, or an error the grammar does not cover and
-a retry does not pass: do not go round in circles. Report it with
-`report_issue` (the tool, what you expected, what Atome answered; never
-record values or personal data), tell the person in plain words what is
-blocked, and that Atome's team has the report. Big builds and large imports go
-through an Atome consultant: say so, and point them to Atome's support.
+a retry does not pass: do not go round in circles. Tell the person in plain
+words what is blocked. Big builds and large imports go through an Atome
+consultant: say so, and point them to Atome's support.
+
+When an Atome tool fails or needs a workaround, offer to report it to
+Atome's team with `report_issue`, through the atome-retour skill: drafted,
+shown, and sent only on their yes, never with their data.

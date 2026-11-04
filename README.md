@@ -16,7 +16,16 @@ In Claude Code:
 ```
 
 In Claude (web or desktop): **Customize > Plugins > Add > Add marketplace**,
-enter `atome-software/atome-plugins`, then add **Atome**.
+enter `atome-software/atome-plugins`, then add **Atome**. Open the plugin's **Connectors** tab (or
+**Customize > Connectors**) and connect Atome, with your browser signed in to
+the same Claude account as the app. This repository is public: no GitHub account
+and no Claude GitHub App are needed (only private repositories need them). If
+the dialog asks you to install the Claude GitHub App, skip it and use the Claude
+Code commands above, typed in a session of the desktop app's Code tab.
+
+For Cursor, [`plugins/atome`](plugins/atome) is ready in the open
+[Agent Plugins](https://agent-plugins.org) format: it works once Atome
+accepts Cursor's sign-in.
 
 ## What it does
 

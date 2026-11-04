@@ -92,3 +92,9 @@ twice.
   everyone. Never in a member's profile, nor in the text of the
   organisation's emails.
 - No key, and no record values in an answer beyond what the summary needs.
+
+## When a tool fails
+
+When an Atome tool fails or needs a workaround, offer to report it to
+Atome's team with `report_issue`, through the atome-retour skill: drafted,
+shown, and sent only on their yes, never with their data.
