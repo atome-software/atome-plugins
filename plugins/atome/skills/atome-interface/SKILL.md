@@ -8,8 +8,8 @@ description: Change what people see and enter in their Atome app, said in their 
 The person says what should change in their app. You make it, one change at
 a time, through Atome's tools, showing first what will change. Talk about
 their app (their projects, their deals, their page), never about tools,
-payloads or ids. Answer in the person's language (French when they write in
-French).
+payloads or ids. Answer in the person's language, from your first message
+(French when they write in French).
 
 Every write goes through Atome's own tools, under the access the person
 granted when they connected Atome. There is nothing to install, no key and no
@@ -17,8 +17,11 @@ script.
 
 ## Before anything
 
-1. **The workspace.** If the connection reaches several workspaces
-   (`list_workspaces`), ask which one once, then pass it to every call.
+1. **The connection and the workspace**: `list_workspaces` first. If Atome's
+   tools are not there or the connection is missing, give the one connect
+   step of the atome-accueil skill ("The connection"), in one message, and
+   nothing else. One workspace is theirs: never ask. If the connection
+   reaches several, ask which one once, then pass it to every call.
 2. **What Atome already knows of their company**: read `company/profile.md`
    with `read_brain_file`. If it is missing or thin, do the welcome first
    (the atome-accueil skill), in a few questions, then come back to the

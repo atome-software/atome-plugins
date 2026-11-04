@@ -9,7 +9,7 @@ The person wants data from somewhere else to live in their app. The goal:
 every row of the export ends up in Atome, and the check measures it at
 **zero gap**. Nothing is written before it has been tried: the file first,
 then a dry run, then the real write, then the check. Answer in the person's
-language.
+language, from your first message.
 
 This is for the everyday import: a few hundred or a few thousand rows, one
 collection at a time. A large migration (tens of thousands of rows, many
@@ -18,8 +18,8 @@ so early, and point them to Atome's support.
 
 ## First, with them
 
-1. **The workspace** and **their company**, as for any change (the
-   atome-interface skill, "Before anything").
+1. **The connection**, **the workspace** and **their company**, as for any
+   change (the atome-interface skill, "Before anything").
 2. **The export**: a file they share in the conversation (CSV, or Excel
    saved as CSV), or a file already in Atome (`read_file`, `analyze_file`
    for a PDF). It needs a column that identifies each row in the tool it

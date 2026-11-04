@@ -7,9 +7,10 @@ description: Answer a question about what Atome can do and how, without changing
 
 This skill answers questions about Atome and gives the rules to read before
 changing an app. It writes nothing. Answer simply, in the person's language,
-with an example from their own app when it helps; say when a rule is still
-an open question rather than asserting it. If the question leads to a change,
-offer to make it (the atome-interface and atome-automation skills).
+from your first message, with an example from their own app when it helps;
+say when a rule is still an open question rather than asserting it. If the
+question leads to a change, offer to make it (the atome-interface and
+atome-automation skills).
 
 ## Where the truth is
 

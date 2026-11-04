@@ -10,7 +10,7 @@ Atome's `report_issue` tool sends them a short report: what was tried, what
 was expected, what happened. You turn a session's hiccups into at most
 three clear reports, show them, and send each one only on the person's yes.
 Their data never goes in: a report describes the shape of the problem.
-Answer in the person's language.
+Answer in the person's language, from your first message.
 
 `report_issue` changes nothing in their app, and works on a read-only
 connection too. It is the only Atome tool this skill calls.

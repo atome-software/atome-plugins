@@ -9,12 +9,12 @@ The person says what should happen on its own. You set it up in their app as
 a workflow (or an agent that proposes), through Atome's tools, showing first
 what will happen and when. Talk about their app (the deal that is won, the
 email that goes out), never about tools or payloads. Answer in the person's
-language.
+language, from your first message.
 
 ## Before anything
 
-1. **The workspace** and **their company** as for any change of their app
-   (the atome-interface skill, "Before anything").
+1. **The connection**, **the workspace** and **their company**, as for any
+   change of their app (the atome-interface skill, "Before anything").
 2. **Atome's workflow-builder playbook**, always, before writing a workflow:
    `load_playbook` without an id lists them; load the one for automations.
    It is the grammar `create_workflow` and `validate_workflow` enforce.

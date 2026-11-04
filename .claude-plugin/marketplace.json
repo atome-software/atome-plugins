@@ -10,7 +10,7 @@
     {
       "name": "atome",
       "source": "./plugins/atome",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "description": "Build your Atome app in your own words: fields, views, pages, forms, automations, data imports. Construisez votre app Atome avec vos mots.",
       "category": "productivity",
       "tags": [
