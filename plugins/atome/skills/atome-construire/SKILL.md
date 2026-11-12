@@ -19,15 +19,27 @@ atome-automation skills).
    `get_page_view`, `list_workflows` and `get_workflow`, `get_access_rules`,
    the brain (`list_brain_files`, `read_brain_file`). Read; never answer
    from memory about their app.
-2. **Atome's own playbooks.** `load_playbook` without an id lists them (the
-   interface-building one has the page and view grammar, the workflow-builder
-   one the automation grammar). They come from Atome's server and are always
-   current: when one says something precise, it wins.
-3. **The tools' own descriptions.** Each Atome tool says what it takes and
+2. **Atome's published grammar**, at https://api.atome.sh/docs/atome-grammar: Markdown, no key, generated from
+   Atome's own definitions for the build that runs. It has the page and view
+   grammar, filters and sorts, rich text, forms, document templates, every
+   field type with its configuration as JSON Schema, the formula functions,
+   and the connector's tools by name. Fetch it when you need it, never from
+   memory and never from a copy:
+   - read `https://api.atome.sh/docs/atome-grammar/version` first, and say which build you read (`build_sha`);
+   - then the page that covers the question; `https://api.atome.sh/docs/atome-grammar/llms.txt` lists them;
+   - if a fetch fails, say so plainly and stop rather than guess.
+3. **Atome's own playbooks.** `load_playbook` without an id lists them (the
+   interface-building one, the workflow-builder one for automations). They
+   are not in the published grammar; they come from Atome's server and are
+   always current: when one says something precise, it wins.
+4. **The tools' own descriptions.** Each Atome tool says what it takes and
    who may call it (many structure tools need an owner or an admin, and the
-   connection's write access to pages and automations).
-4. **The reference files here**, for what has bitten before: rules proven on
-   a real Atome workspace, each with its id and its status.
+   connection's write access to pages and automations); `https://api.atome.sh/docs/atome-grammar/tools/index.md`
+   lists them all, one line each.
+5. **The reference files here**, for what has bitten before: rules proven on
+   a real Atome workspace, each with its id and its status. They do not
+   repeat the published grammar; when they differ from it, the published
+   page says what the running build accepts.
 
 ## Which reference to read
 
@@ -50,7 +62,7 @@ engineers, not settled; say so when you rely on it.
 ## The golden rules
 
 1. **What Atome serves is the truth.** A type, a step, a layout exists only
-   if Atome's tools and playbooks accept it.
+   if Atome's published grammar, its tools and its playbooks accept it.
 2. **A rule has its source.** Without one, it is a question, not a rule.
 3. **Nothing goes live unchecked.** A view is written as a draft, validated,
    then published; a workflow is a draft until it is published; a form

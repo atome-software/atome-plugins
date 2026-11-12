@@ -1,18 +1,18 @@
 # Fields, relations and collections
 
-What Atome takes for a field, a calculation and a collection. Each rule:
-`ID (status): rule`. Read the field's live shape with `describe_collection`
-(`raw: true`) before changing it.
+What has bitten before with a field, a calculation and a collection. Each
+rule: `ID (status): rule`. Every field type and the configuration it takes,
+as JSON Schema, is Atome's published page `https://api.atome.sh/docs/atome-grammar/fields/index.md` (read
+`https://api.atome.sh/docs/atome-grammar/version` first and say which build you read). Read the field's live
+shape with `describe_collection` (`raw: true`) before changing it.
 
 ## Types
 
-- **CH-001 (proven)**: there are 22 field types and no others: text,
-  rich_text, number, boolean, date, select, multi-select (with a hyphen),
-  relation, checkbox, lookup, rollup, file, formula, array, status, progress,
-  url, email, phone, scale, ledger, duration. long_text, currency, percent,
-  datetime, multi_select and member do not exist: use rich_text; number with
-  its number format; date with its time option; multi-select; a relation to
-  the workspace members.
+- **CH-001 (proven)**: the field types are the ones the published page
+  lists (`https://api.atome.sh/docs/atome-grammar/fields/index.md`), and no others; multi-select is written with
+  a hyphen. long_text, currency, percent, datetime, multi_select and member
+  do not exist: use rich_text; number with its number format; date with its
+  time option; multi-select; a relation to the workspace members.
 - **CH-005 (proven)**: an amount or a percentage is a number with its format:
   `number_format.format_type` is number, currency, percent or bytes, and
   `currency_symbol` gives an amount its symbol.

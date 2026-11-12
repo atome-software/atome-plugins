@@ -17,7 +17,10 @@ language, from your first message.
    change of their app (the atome-interface skill, "Before anything").
 2. **Atome's workflow-builder playbook**, always, before writing a workflow:
    `load_playbook` without an id lists them; load the one for automations.
-   It is the grammar `create_workflow` and `validate_workflow` enforce.
+   It is the grammar `create_workflow` and `validate_workflow` enforce. A
+   formula inside a workflow takes the functions Atome publishes at
+   `https://api.atome.sh/docs/atome-grammar/formulas/functions.md` (read `https://api.atome.sh/docs/atome-grammar/version` first and say which build
+   you read; if a read fails, say so and stop).
 3. **The rules that have bitten before**: the atome-construire skill,
    `reference/workflows-and-agents.md`.
 

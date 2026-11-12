@@ -26,11 +26,18 @@ script.
    with `read_brain_file`. If it is missing or thin, do the welcome first
    (the atome-accueil skill), in a few questions, then come back to the
    request.
-3. **The grammar of what you touch**, before writing. For a page, a view or
-   a form: Atome's interface-building playbook (`load_playbook` without an
-   id lists them; load the one for pages and views). For the rules that have
-   bitten before: the atome-construire skill and its reference files
-   (`fields.md`, `views-pages-forms.md`, `access-and-context.md`).
+3. **The grammar of what you touch**, before writing. Atome publishes it,
+   without a key, at https://api.atome.sh/docs/atome-grammar: read `https://api.atome.sh/docs/atome-grammar/version` first and say which build you
+   read, then the page for what you touch (a page or a view:
+   `pages/grammar.md`; filters and sorts: `filters/grammar.md`; rich text:
+   `rich-text/grammar.md`; a form: `forms/index.md`; a field and its
+   configuration: `fields/index.md`; a formula: `formulas/functions.md`; the
+   list is `https://api.atome.sh/docs/atome-grammar/llms.txt`). If a read fails, say so plainly and stop: never
+   write from memory. Then Atome's interface-building playbook
+   (`load_playbook` without an id lists them; load the one for pages and
+   views). For the rules that have bitten before: the atome-construire skill
+   and its reference files (`fields.md`, `views-pages-forms.md`,
+   `access-and-context.md`).
 
 ## One change
 
@@ -85,6 +92,18 @@ script.
   what it will look like, and publish with `publish_pages` (its `page_ids`)
   after their go. `publish_pages` without `page_ids` publishes nothing and
   lists the pages with unpublished changes.
+- **Every page you create gets an icon** that fits what it is for
+  (`Briefcase` for deals, `Calendar` for meetings, `TrendingUp` for a
+  dashboard): `icon` on `create_page`, and `update_page_view` with `icon`
+  for a page that already exists. Only keys of Atome's icon registry count,
+  exactly as it spells them (Home, Users, Building2); an unknown one is
+  swapped for a blank file icon and the result says so (`icon_replaced`):
+  fix it. Give
+  each tab of a view its own icon too: from four tabs on, only the icons
+  show. Work the rest of the screen as well: sections and tabs named for
+  what people do there, the view that fits the task, a record panel that
+  groups its fields by use, and a page with nothing to show yet that says
+  in text what is missing and where it will come from, never a blank screen.
 - **Filters on a select or a status use option ids**, never labels. A count
   or a rollup with no link is empty, not 0: filter it with "is not empty".
 - **A form is created as a draft** (`create_form`) and collects nothing until

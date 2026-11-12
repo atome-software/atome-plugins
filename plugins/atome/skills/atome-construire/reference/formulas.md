@@ -1,7 +1,9 @@
 # Formulas and references
 
-What a formula field and a workflow reference take. Each rule:
-`ID (status): rule`.
+What has bitten before with a formula field and a workflow reference.
+Each rule: `ID (status): rule`. The functions a formula may call, with their
+signatures, are Atome's published page `https://api.atome.sh/docs/atome-grammar/formulas/functions.md` (read
+`https://api.atome.sh/docs/atome-grammar/version` first and say which build you read).
 
 ## Formula fields
 
@@ -9,16 +11,9 @@ What a formula field and a workflow reference take. Each rule:
   reads, and its return type (number, text, boolean, date, relation, select,
   multi-select, any). All three are required.
 - **EX-001 (read)**: a formula reads a field with `prop("slug")`.
-- **EX-006 (proven)**: Atome has 77 formula functions: arithmetic (add,
-  subtract, multiply, divide, mod, abs, round, floor, ceil, pow, sqrt, min,
-  max), text (concat, length, slice, replace, replaceAll, upper, lower, trim,
-  test, format, contains, includes, hasAny, hasAll, hasNone), logic (if, and,
-  or, not, equal, unequal, empty, greater, less, greaterOrEqual,
-  lessOrEqual), dates (now, today, date, parseDate, dateAdd, dateBetween,
-  formatDate, setTimezone, year, month, day, week), conversion (toNumber,
-  text, toText), prop, relations (relationFirst, relationLast, relationSort,
-  relationCount, relationFilter, relationFind, relationMap, relationGet,
-  relationEmpty) and lists.
+- **EX-006 (proven)**: a formula calls only the functions of the published
+  page (`https://api.atome.sh/docs/atome-grammar/formulas/functions.md`), with the signatures it gives. The 77
+  functions Atome had on 29 Oct. 2026 were each tried on a real workspace.
 - **EX-008 (proven)**: a formula in error is empty, without saying so. Read
   its value on a record before relying on it.
 

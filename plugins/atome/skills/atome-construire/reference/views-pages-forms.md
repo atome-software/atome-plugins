@@ -1,14 +1,17 @@
 # Views, pages and forms
 
-The grammar of a view is Atome's interface-building playbook
-(`load_playbook`): load it before writing a page, a view or a form. These are
-the rules that have bitten before. Each rule: `ID (status): rule`.
+The grammar of a page and its view, of filters and sorts, of rich text and
+of a form is published by Atome: `https://api.atome.sh/docs/atome-grammar/pages/grammar.md`,
+`https://api.atome.sh/docs/atome-grammar/filters/grammar.md`, `https://api.atome.sh/docs/atome-grammar/rich-text/grammar.md`, `https://api.atome.sh/docs/atome-grammar/forms/index.md`
+(read `https://api.atome.sh/docs/atome-grammar/version` first and say which build you read; if a fetch fails, say
+so and stop). Then load Atome's interface-building playbook
+(`load_playbook`) before writing a page, a view or a form. These are the
+rules that have bitten before. Each rule: `ID (status): rule`.
 
 ## Views
 
-- **VU-001 (probed)**: a data view is laid out as grid, table, list, gallery,
-  board (kanban), timeline, calendar, chart, number, pivot or planning. A map
-  is a chart type, not a layout.
+- **VU-001 (probed)**: a data view's layouts are the ones the page grammar
+  lists; a board is the kanban. A map is a chart type, not a layout.
 - **VU-002 (proven)**: only the keys of the grammar survive in a view;
   unknown keys are dropped without an error.
 - **VU-003 (proven)**: a text block holds rich text as a document, following
