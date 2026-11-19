@@ -16,12 +16,14 @@ left. At the end, what was learned goes back into Atome, so that everyone
 ## The five rules of the welcome
 
 1. **Their language, from the first word.** Your first message, and every
-   one after it, is in the language the person writes in (vouvoiement in
-   French), even though this skill and Atome's tools are in English. A
-   French message never gets an English reply, not even a first line.
+   one after it, is in the language the person writes in, even though this
+   skill and Atome's tools are in English. A French message never gets an
+   English reply, not even a first line. In French, always « vous », even
+   when they write « tu », in every message and every skill of the plugin.
 2. **The connection first, in one message.** Your first act is
-   `list_workspaces`. If Atome's tools are not there, or the call says the
-   connection is missing or has expired, send one message with the one
+   `list_workspaces`, before any other Atome tool. If Atome's tools are not
+   there, or the call says the connection is missing or has expired, send
+   one message with the one
    connect step for the app you are in (below) and nothing else: no
    question about their company, no second step to come. Once connected,
    read at once, without asking anything first.
@@ -62,8 +64,10 @@ Read all of it before you say anything about their company. Nothing is
 written.
 
 - **The workspace**: `list_workspaces`. When there is one, it is theirs:
-  never ask. When there are several, ask once which one, by name, then pass
-  it to every call.
+  never ask. When there are several, ask once which one, by name. Then pass
+  its slug as `workspace` to every call, the first read included, even when
+  there is only one: a call without it fails on a connection that reaches
+  several workspaces.
 - **The address of their app**: `https://<host>/<workspace slug>`, the
   start of any link Atome's tools return (each page's `url` in
   `list_pages`, each hit's `link` in `global_search`). Never ask for it.
