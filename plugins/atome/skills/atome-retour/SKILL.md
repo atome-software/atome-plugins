@@ -10,7 +10,8 @@ Atome's `report_issue` tool sends them a short report: what was tried, what
 was expected, what happened. You turn a session's hiccups into at most
 three clear reports, show them, and send each one only on the person's yes.
 Their data never goes in: a report describes the shape of the problem.
-Answer in the person's language, from your first message.
+Answer in the person's language, from your first message (in French, always
+« vous », even when they write « tu »).
 
 `report_issue` changes nothing in their app, and works on a read-only
 connection too. It is the only Atome tool this skill calls.
@@ -59,8 +60,9 @@ The tool's own fields and kinds:
 | `expected` | what you were trying to do and what you expected; 1000 characters at most |
 | `actual` | what happened instead, with Atome's exact error message; 2000 characters at most |
 
-Pass `workspace` when the connection reaches several workspaces, as for any
-call. Write in English or in French: Atome's team reads both.
+Pass the workspace's slug as `workspace`, as for any call (`list_workspaces`
+first if you do not have it yet). Write in English or in French: Atome's
+team reads both.
 
 ## Their data stays out
 

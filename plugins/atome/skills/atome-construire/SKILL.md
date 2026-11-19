@@ -7,15 +7,17 @@ description: Answer a question about what Atome can do and how, without changing
 
 This skill answers questions about Atome and gives the rules to read before
 changing an app. It writes nothing. Answer simply, in the person's language,
-from your first message, with an example from their own app when it helps;
+from your first message (in French, always « vous », even when they write
+« tu »), with an example from their own app when it helps;
 say when a rule is still an open question rather than asserting it. If the
 question leads to a change, offer to make it (the atome-interface and
 atome-automation skills).
 
 ## Where the truth is
 
-1. **Their app, live.** `list_collections`, `describe_collection` (with
-   `raw: true` for each field's stored shape), `list_pages` and
+1. **Their app, live.** `list_workspaces` first, then the workspace's slug
+   as `workspace` on every call: `list_collections`, `describe_collection`
+   (with `raw: true` for each field's stored shape), `list_pages` and
    `get_page_view`, `list_workflows` and `get_workflow`, `get_access_rules`,
    the brain (`list_brain_files`, `read_brain_file`). Read; never answer
    from memory about their app.

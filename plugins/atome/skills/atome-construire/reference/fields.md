@@ -52,6 +52,14 @@ shape with `describe_collection` (`raw: true`) before changing it.
 - **CH-019 (proven)**: Atome barely checks a field's configuration: a wrong
   select, status, relation or rollup configuration is stored as is. Check it
   yourself against these rules before sending.
+- **WF-031 (observed)**: changing the configuration of a field (its number
+  format, thousand_separator) shows the live workflows that read or write
+  the same collection as « Error » in Atome's automations list, though
+  their runs complete and validate_workflow passes; a live workflow on
+  another collection stays « Active », and putting the configuration back
+  clears it. Don't change the format of a field on a collection live
+  workflows use; if you must, say the badge will appear and is not a
+  failure.
 - **CH-018 (proven)**: the primary field (the record's name) can only be a
   text, a ledger, or a formula returning text or a number.
 - **CH-029 (proven)**: the primary field cannot be deleted.
