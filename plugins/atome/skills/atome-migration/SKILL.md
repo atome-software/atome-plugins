@@ -9,7 +9,8 @@ The person wants data from somewhere else to live in their app. The goal:
 every row of the export ends up in Atome, and the check measures it at
 **zero gap**. Nothing is written before it has been tried: the file first,
 then a dry run, then the real write, then the check. Answer in the person's
-language, from your first message.
+language, from your first message (in French, always « vous », even when
+they write « tu »).
 
 This is for the everyday import: a few hundred or a few thousand rows, one
 collection at a time. A large migration (tens of thousands of rows, many
