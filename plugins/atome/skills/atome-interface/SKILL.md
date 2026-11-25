@@ -51,12 +51,19 @@ script.
    mean; if two things look like it, ask which one.
 2. **Say it in one sentence**: what will change and where they will see it.
    For a field whose configuration you replace, keep the configuration you
-   read: it is the only way back.
+   read: it is the only way back. **If it changes an existing
+   field's configuration** (its number format, separator, options; not a new
+   field or a rename), `list_workflows`, then `get_workflow` on each active
+   one: find those that read or write that collection (WF-031).
 3. **Ask for the go**, as a question with clear choices: "Make this change"
    (first, recommended), "Change something", "Cancel". Any go in their own
    words (oui, go, vas-y, fais-le) counts. On "Cancel" or a no, nothing is
-   written. One go, one change.
-4. **Write**, then **read it back** (`describe_collection`, `get_page_view`,
+   written. One go, one change. **When step 2 found an automation, the
+   question's own text names it and warns**: Atome's automations list may
+   show it as « Error »; it keeps running, this is not a failure, and putting
+   the configuration back clears it. In a message before the question, or
+   after the write, the warning is missed. None found: do not mention it.
+4. **Write** (never before that warning), then **read it back** (`describe_collection`, `get_page_view`,
    `get_access_rules`). A success message is not a proof; the read-back is.
 5. **Check the screen with them**: where to look in their app, what they
    should see there.
